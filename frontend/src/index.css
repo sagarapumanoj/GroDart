@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --color-ink: #16241d;
+  --color-muted: #5c6b62;
+  --color-paper: #f6faf4;
+  --color-line: #dbe6d9;
+  --color-leaf-50: #e6f3e9;
+  --color-leaf-600: #1d7a4b;
+  --color-leaf-800: #135a37;
+  --color-leaf-900: #0e3a27;
+  --color-turmeric: #f4b400;
+  --color-chili: #cf3f2a;
+}
+
+body { background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+:focus-visible { outline: 3px solid var(--color-turmeric); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .kit-pop { animation: kitpop 260ms ease-out; }
+  @keyframes kitpop { from { transform: scale(0.96); opacity: 0.4; } to { transform: scale(1); opacity: 1; } }
+}
